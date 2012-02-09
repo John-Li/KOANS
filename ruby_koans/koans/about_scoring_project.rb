@@ -29,7 +29,7 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 #
 # Your goal is to write the score method.
 
-def score(dice)
+def score(dice)                
   sum = 0
   sum if dice.empty?
 
