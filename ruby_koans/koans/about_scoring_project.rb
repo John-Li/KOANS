@@ -42,26 +42,18 @@ def score(dice)
     sum += count_1*100
   end
 
-  count_2 = dice.count{|number|number==2}
-  sum += 200 if count_2 == 3
-
-  count_3 = dice.count{|number|number==3}
-  sum += 300 if count_3 == 3
-
-  count_4 = dice.count{|number|number==4}
-  sum += 400 if count_4 == 3
+  for number in 2..6 do
+    if dice.count { |roll| roll==number } == 3
+      sum += number*100
+    end
+  end
 
   count_5 = dice.count{|number|number==5}
   if count_5 > 3
     sum += (500+((count_5-3)*50))
   elsif count_5 <= 2
     sum += count_5*50
-  elsif count_5 == 3
-    sum += 500
   end
-
-  count_6 = dice.count{|number|number==6}
-  sum += 600 if count_6 == 3
   
   sum
 end
