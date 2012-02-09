@@ -1,0 +1,18 @@
+class Animal
+  LEGS = 4
+end
+
+class MyAnimals
+  LEGS = 2
+
+  puts Animal::LEGS
+
+  class Bird < Animal
+    def legs_in_bird
+      LEGS
+    end
+  end
+end
+
+x = MyAnimals::Bird.new.legs_in_bird
+puts x
