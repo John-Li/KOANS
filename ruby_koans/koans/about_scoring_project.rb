@@ -31,7 +31,7 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 
 def score(dice)                
   sum = 0
-  sum if dice.empty?
+  return sum if dice.empty?
 
   count_1 = dice.count{|number|number==1}
   if count_1 > 3
