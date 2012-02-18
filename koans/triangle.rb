@@ -14,8 +14,8 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  sides = ([a,b,c].uniq.size)-1
-  [:equilateral, :isosceles, :scalene][sides]
+  sides = [a,b,c].uniq.size
+  [nil, :equilateral, :isosceles, :scalene][sides]
 end
 
 # Error class used in part 2.  No need to change this code.
