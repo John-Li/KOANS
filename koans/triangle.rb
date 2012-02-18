@@ -15,7 +15,7 @@
 #
 def triangle(a, b, c)
   sides = ([a,b,c].uniq.size)-1
-  [:equilateral, :isosceles, :scalene].at(sides)
+  [:equilateral, :isosceles, :scalene][sides]
 end
 
 # Error class used in part 2.  No need to change this code.
